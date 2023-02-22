@@ -4,10 +4,10 @@
 Attached is a log file called test.csv generated from a simulated equity options strategy run on 10-12-2021. There are two types of log messages, each coming from one of two components of the simulated system: (1) Order signals from the Strategy Engine (SE); and (2) corresponding order events from Order Manager (OM).
 
 ### The SE observes the market and generates order instructions where it sees opportunities. Any time the SE generates a set of instructions, it logs:
-Security mapping OptionId, unique to each option instrument.
-UnderlyingSymbol, Expiration, Strike and CallPut flag describing the given instrument.
-Side, Size, Price and destination Exchange for order.
-Display size of the opposite side of the quote for the given exchange at the time the SE sent the instructions (MarketSize).
+* Security mapping OptionId, unique to each option instrument.
+* UnderlyingSymbol, Expiration, Strike and CallPut flag describing the given instrument.
+* Side, Size, Price and destination Exchange for order.
+* Display size of the opposite side of the quote for the given exchange at the time the SE sent the instructions (MarketSize).
 The OM receives order instructions from the SE, and either: (1) Converts these instructions to ‘NEW’ orders, forwarding them to the market; or (2) Rejects the SE’s instructions. ‘NEW’ order messages will be followed by a second ‘FILL’ or ‘CANCEL’ message from the OM based on whether or not a given order filled in the market. 
 
 ### For each order event, the OM will log:
