@@ -8,9 +8,7 @@ Attached is a log file called test.csv generated from a simulated equity options
 * UnderlyingSymbol, Expiration, Strike and CallPut flag describing the given instrument.
 * Side, Size, Price and destination Exchange for order.
 * Display size of the opposite side of the quote for the given exchange at the time the SE sent the instructions (MarketSize).
-The OM receives order instructions from the SE, and either: (1) Converts these instructions to ‘NEW’ orders, forwarding them to the market; or (2) Rejects the SE’s instructions. ‘NEW’ order messages will be followed by a second ‘FILL’ or ‘CANCEL’ message from the OM based on whether or not a given order filled in the market. 
-
-### For each order event, the OM will log:
+### The OM receives order instructions from the SE, and either: (1) Converts these instructions to ‘NEW’ orders, forwarding them to the market; or (2) Rejects the SE’s instructions. ‘NEW’ order messages will be followed by a second ‘FILL’ or ‘CANCEL’ message from the OM based on whether or not a given order filled in the market. For each order event, the OM will log:
 OptionId matching that of SE order instructions for the same instrument.
 Sequence number, unique to each order (OrderId); can be used to correlate ‘FILL’ or ‘CANCEL’ with initial ‘NEW’ orders.
 OrderEventType (e.g. NEW, REJECT, FILL or CANCEL).
