@@ -12,5 +12,6 @@ Attached is a log file called test.csv generated from a simulated equity options
 * OptionId matching that of SE order instructions for the same instrument.
 * Sequence number, unique to each order (OrderId); can be used to correlate ‘FILL’ or ‘CANCEL’ with initial ‘NEW’ orders.
 * OrderEventType (e.g. NEW, REJECT, FILL or CANCEL).
+
 All orders can be assumed to be immediate-or-cancel and there will be no partial fills.
 Report on any patterns you identify that may be used to: (1) Increase fill rate; and/or (2) reduce latency. Log parsing, analysis, and reporting may be executed in/on any language/platform. All work submitted will be considered; e.g. how you arrive at the results is as important as the results themselves. 
