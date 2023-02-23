@@ -1,4 +1,4 @@
-# Quant-OptionsData-Analysis
+# Quant Options Order Log Data Analysis
 
 ## Prompt:
 Attached is a log file called test.csv generated from a simulated equity options strategy run on 10-12-2021. There are two types of log messages, each coming from one of two components of the simulated system: (1) Order signals from the Strategy Engine (SE); and (2) corresponding order events from Order Manager (OM).
